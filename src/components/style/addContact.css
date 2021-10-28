@@ -1,0 +1,25 @@
+.backGround {
+  background-color: #d3e4cd;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.view {
+  background-color: #d3e4cd;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: auto;
+}
+.btn-color {
+  background-color: #99a799;
+}
+.view-btn-color {
+  background-color: #a2d2ff;
+}
+.update-btn-color {
+  background-color: #6ecb63;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.delete-btn-color {
+  background-color: #ff616d;
+}
