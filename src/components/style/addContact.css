@@ -2,11 +2,13 @@
   background-color: #d3e4cd;
   margin-top: 10px;
   margin-right: 10px;
+  border-radius: 5px;
 }
 .view {
   background-color: #d3e4cd;
   margin-top: 10px;
   margin-left: 10px;
+  border-radius: 5px;
   height: auto;
 }
 .btn-color {
