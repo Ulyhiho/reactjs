@@ -1,0 +1,10 @@
+.bgDelete {
+  background-color: #d3e4cd;
+  margin-top: 10px;
+  margin-left: 350%;
+}
+.delete-color {
+  background-color: #ff616d;
+  margin-left: 5px;
+  border: 1px solid red;
+}

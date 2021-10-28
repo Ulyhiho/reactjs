@@ -14,12 +14,15 @@
 }
 .view-btn-color {
   background-color: #a2d2ff;
+  border: 1px solid blue;
 }
 .update-btn-color {
   background-color: #6ecb63;
+  border: 1px solid green;
   margin-right: 5px;
   margin-left: 5px;
 }
 .delete-btn-color {
   background-color: #ff616d;
+  border: 1px solid red;
 }

@@ -25,6 +25,7 @@ export default class ContactList extends React.Component {
     const json = JSON.stringify(this.state.contactInfo);
     localStorage.setItem("contactInfo", json);
   }
+  //fetch contactinfo
   componentDidMount() {
     try {
       const json = localStorage.getItem("contactInfo");
@@ -253,7 +254,7 @@ export default class ContactList extends React.Component {
           <div className="col-sm-3 backGround">
             <br />
             <br />
-            <form ref="myForm" className="myForm">
+            <form ref="myForm" className="myForm ">
               <div className="mb-3">
                 <label className="form-label">Full Name</label>
                 <input

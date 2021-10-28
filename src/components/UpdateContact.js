@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import validator from "validator";
+import "./style/updateContact.css";
 
 const Update = (props) => {
   const contactInfo = JSON.parse(localStorage.getItem("contactInfo"));
@@ -108,77 +109,79 @@ const Update = (props) => {
     return true;
   };
   return (
-    <div className="col-sm-3 container-md justify-content-md-center">
-      <br />
-      <form onSubmit={(e) => handleUpdateOption(e)}>
-        <div className="mb-3">
-          <label className="form-label">
-            <h3 style={{ color: "gray" }}>UPDATE</h3>
-          </label>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">
-            ID: {props.location.state.id + 1}
-          </label>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">
-            Full Name: {contactInfo[props.location.state.id].fullname} (view)
-          </label>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Email Address</label>
-          <input
-            className="form-control"
-            placeholder="example@email.com"
-            name="email"
-            defaultValue={contactInfo[props.location.state.id].email}
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Contact Number: </label>
-          <input
-            className="form-control"
-            placeholder="09999999999"
-            type="text"
-            name="contact"
-            defaultValue={contactInfo[props.location.state.id].contact}
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Location</label>
-          <select className="form-select" type="text" name="location">
-            <option value={contactInfo[props.location.state.id].location}>
-              {contactInfo[props.location.state.id].location}
-            </option>
-            <option
-              value={
-                contactInfo[props.location.state.id].location !== "Manila"
-                  ? "Manila"
-                  : "Cebu"
-              }
-            >
-              {contactInfo[props.location.state.id].location !== "Manila"
-                ? "Manila"
-                : "Cebu"}
-            </option>
-          </select>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">
-            Registered Date: {contactInfo[props.location.state.id].regdate}{" "}
-            (view)
-          </label>
-        </div>
-        <div className="mb-3">
-          <div className="bd-example">
-            <Link to="/">
-              <button className="btn btn-outline-secondary">&lt; Back</button>
-            </Link>
-            <button className="btn btn-outline-secondary">Save</button>
+    <div className="col-sm-3 container-md justify-content-md-center ">
+      <div className="bgUpdate">
+        <br />
+        <form onSubmit={(e) => handleUpdateOption(e)}>
+          <div className="mb-3">
+            <label className="form-label">
+              <h3 style={{ color: "gray" }}>UPDATE</h3>
+            </label>
           </div>
-        </div>
-      </form>
+          <div className="mb-3">
+            <label className="form-label">
+              ID: {props.location.state.id + 1}
+            </label>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">
+              Full Name: {contactInfo[props.location.state.id].fullname} (view)
+            </label>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Email Address</label>
+            <input
+              className="form-control"
+              placeholder="example@email.com"
+              name="email"
+              defaultValue={contactInfo[props.location.state.id].email}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Contact Number: </label>
+            <input
+              className="form-control"
+              placeholder="09999999999"
+              type="text"
+              name="contact"
+              defaultValue={contactInfo[props.location.state.id].contact}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Location</label>
+            <select className="form-select" type="text" name="location">
+              <option value={contactInfo[props.location.state.id].location}>
+                {contactInfo[props.location.state.id].location}
+              </option>
+              <option
+                value={
+                  contactInfo[props.location.state.id].location !== "Manila"
+                    ? "Manila"
+                    : "Cebu"
+                }
+              >
+                {contactInfo[props.location.state.id].location !== "Manila"
+                  ? "Manila"
+                  : "Cebu"}
+              </option>
+            </select>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">
+              Registered Date: {contactInfo[props.location.state.id].regdate}{" "}
+              (view)
+            </label>
+          </div>
+          <div className="mb-3">
+            <div className="bd-example">
+              <Link to="/">
+                <button className="btn btn-outline-secondary">Back</button>
+              </Link>
+              <button className="btn update-color">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
